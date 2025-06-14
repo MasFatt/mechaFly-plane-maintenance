@@ -1,47 +1,47 @@
-Tutorial: How to Run Laravel Project from GitHub
-Project: mechaFly-plane-maintenance
-Repository: https://github.com/MasFatt/mechaFly-plane-maintenance.git
-Tools: Laravel 12, Tailwind CSS, Telegram Bot (optional)
+<span># 🚀 How to Run Laravel Project from GitHub</span>  
+<span>🛠️ Project: mechaFly-plane-maintenance</span>  
+<span>📦 Repository: https://github.com/MasFatt/mechaFly-plane-maintenance.git</span>  
+<span>⚙️ Tools: Laravel 12, Tailwind CSS, Telegram Bot (optional)</span>  
 
-1. Clone the Repository
-git clone https://github.com/MasFatt/mechaFly-plane-maintenance.git
-cd mechaFly-plane-maintenance
-2. Install Dependencies
-composer install
+<span>## 📁 1. Clone the Repository</span>  
+<span>git clone https://github.com/MasFatt/mechaFly-plane-maintenance.git</span>  
+<span>cd mechaFly-plane-maintenance</span>  
 
-# Optional for Tailwind
-npm install && npm run dev
-3. Copy .env and Generate App Key
-cp .env.example .env
-php artisan key:generate
-4. Set Up Database
-Create a new database in MySQL (e.g., mechafly_db).
-Edit the .env file:
+<span>## 📦 2. Install Dependencies</span>  
+<span>composer install</span>  
+<span># Optional for Tailwind</span>  
+<span>npm install && npm run dev</span>  
 
-DB_DATABASE=mechafly_db
-DB_USERNAME=root
-DB_PASSWORD=your_password
-5. Run Migration
-php artisan migrate
-6. Run Laravel Server
-php artisan serve
+<span>## ⚙️ 3. Setup Environment</span>  
+<span>cp .env.example .env</span>  
+<span>php artisan key:generate</span>  
 
-Then access in browser:
-http://localhost:8000
-7. (Optional) Run Tailwind CSS
-npm run dev
-# For auto-reload
-npm run watch
-8. (Optional) Configure Telegram Bot
-1. Create a bot on https://t.me/BotFather
-2. Get BOT_TOKEN and CHAT_ID
-3. Set in your .env:
+<span>## 🗄️ 4. Configure Database</span>  
+<span>Create a new database in MySQL (e.g., db_dhita).</span>  
+<span>Edit the .env file as follows:</span>  
+<span>DB_DATABASE=db_dhita</span>  
+<span>DB_USERNAME=root</span>  
+<span>DB_PASSWORD=</span>  
 
-TELEGRAM_BOT_TOKEN=your_bot_token
-TELEGRAM_CHAT_ID=your_chat_id
-Tips Tambahan
-Useful artisan commands:
-Run server again: php artisan serve
-Reset database: php artisan migrate:fresh --seed
-List routes: php artisan route:list
-Clear logs: php artisan log:clear or check storage/logs
+<span>## 🧱 5. Run Migrations</span>  
+<span>php artisan migrate</span>  
+
+<span>## 🌐 6. Start Laravel Development Server</span>  
+<span>php artisan serve</span>  
+<span>Then access the project via browser:</span>  
+<span>http://localhost:8000</span>  
+
+<span>## 🎨 7. (Optional) Tailwind CSS Watch Mode</span>  
+<span>npm run dev</span>  
+<span># For auto-reload on changes:</span>  
+<span>npm run watch</span>  
+
+<span>## 💡 Additional Tips</span>  
+<span>Useful Artisan Commands:</span>  
+<span>Run server again: php artisan serve</span>  
+<span>Reset database: php artisan migrate:fresh --seed</span>  
+<span>List routes: php artisan route:list</span>  
+<span>Clear logs: php artisan log:clear</span>  
+<span>Or manually delete log files in: storage/logs</span>  
+
+<span>✅ You're all set to run the project!</span>
