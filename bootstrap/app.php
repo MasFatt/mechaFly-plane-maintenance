@@ -18,5 +18,5 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })
     ->withSchedule(function (Schedule $schedule) {
-        $schedule->command('app:send-notification-telegram')->everyTenSeconds();
+    $schedule->command('app:send-notification-telegram')->dailyAt('13:34');
     })->create();

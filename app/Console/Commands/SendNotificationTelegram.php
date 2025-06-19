@@ -27,7 +27,9 @@ class SendNotificationTelegram extends Command
      */
     public function handle()
     {
-        $besok = now()->addDay()->format('Y-m-d');
+        // $besok = now()->addDay(2)->format('Y-m-d');
+        $besok = now()->addDays(2)->format('Y-m-d');
+
 
         // Ambil data maintenance yang jatuh tempo besok
         $maintenances = Maintenance::whereDate('next_due', $besok)->get();
