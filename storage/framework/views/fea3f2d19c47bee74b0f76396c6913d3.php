@@ -13,9 +13,9 @@
 
         <!-- Logo -->
         <div class="flex justify-center mb-6">
-            <img src="<?php echo e(asset('storage/Test.png')); ?>" alt="Logo" class="h-10 w-40">
+            <img src="<?php echo e(asset('storage/Test.png')); ?>" alt="Logo" class="h-10 w-40 mt-4">
         </div>
-        
+
 
         <!-- Session Status -->
         <?php if(session('status')): ?>
