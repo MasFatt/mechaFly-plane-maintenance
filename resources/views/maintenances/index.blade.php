@@ -8,26 +8,30 @@
     <div class="max-w-7xl mx-auto mt-12 px-4 sm:px-6 lg:px-8">
         <div class="flex justify-end gap-4 mb-6">
             <!-- Tombol Tambah Jadwal -->
-            <a href="{{ route('maintenances.create') }}"
-               class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-2" fill="none" viewBox="0 0 24 24"
-                     stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M12 4v16m8-8H4"/>
-                </svg>
-                Tambah Jadwal
+            <a href="{{ route('maintenances.create') }}" class="btn btn-outline btn-primary">
+                Tambah Maintenance
             </a>
 
             <!-- Tombol Export Excel -->
             <a href="{{ route('export.aircraft') }}"
-               class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-medium px-5 py-2.5 rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-2" fill="none" viewBox="0 0 24 24"
-                     stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M12 4v16m8-8H4"/>
-                </svg>
+                class="btn btn-outline btn-info">
                 Export ke Excel
             </a>
+
+            <!-- Tombol Export Excel -->
+            <form action="{{ route('maintenance.import') }}" method="POST" enctype="multipart/form-data" class="flex items-center space-x-2">
+                @csrf
+
+                <input
+                    type="file"
+                    name="file"
+                    required
+                    class="file-input file-input-bordered file-input-sm"/>
+
+                <button type="submit" class="btn btn-sm btn-outline btn-primary">
+                    + Import
+                </button>
+            </form>
         </div>
 
         @if ($maintenances->isEmpty())
@@ -67,8 +71,8 @@
                                     <!-- Tombol Edit -->
                                     <a href="{{ route('maintenances.edit', $maintenance->id) }}"
                                         class="text-blue-600 hover:text-blue-800 transition-colors duration-200" title="Edit">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M11 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2v-5M18.5 2.5a2.121 2.121 0 113 3L12 15l-4 1 1-4 9.5-9.5z" />
                                         </svg>

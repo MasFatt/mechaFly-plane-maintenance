@@ -17,5 +17,5 @@ export default {
         },
     },
 
-    plugins: [forms],
+    plugins: [require('daisyui')], // pastikan plugin ditaruh di sini
 };
